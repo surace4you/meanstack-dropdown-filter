@@ -1,0 +1,33 @@
+<html ng-app="myApp">
+<head>
+<title>suresh
+</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<body ng-controller="AppCtrl">
+<div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-3"><label><i class="fa fa-question-circle fa-fw"></i> Coach </label></div>
+                <div class="col-md-4">
+                    <select class="form-control" ng-model="selectedDist" ng-options="district.name for district in districts">
+                        <option value="">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3"><label><i class="fa fa-question-circle fa-fw"></i> Player</label></div>
+                <div class="col-md-4">
+                    <select class="form-control" ng-model="selectedThana" ng-options="thana.cname for thana in thanas | filter: filterExpression">
+                        <option value="">Select</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"> </script>
+<script src="controller/controller.js"></script>
+</html>
